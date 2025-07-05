@@ -1,6 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
-export const getTasks = async () => fetch(`${API_URL}/tasks`).then(res => res.json());
+export const getTasks = async () =>
+  fetch(`${API_URL}/tasks`).then(res => res.json());
 
 export const createTask = async (task) =>
   fetch(`${API_URL}/tasks`, {
