@@ -1,4 +1,5 @@
 import { updateTask } from '../api';
+import '../index.css';
 
 export default function TaskItem({ task, onDelete, onToggle, onEdit }) {
   const handleToggle = async () => {
@@ -7,8 +8,8 @@ export default function TaskItem({ task, onDelete, onToggle, onEdit }) {
   };
 
   return (
-    <div style={{ border: '1px solid #ccc', padding: 8, marginBottom: 8 }}>
-      <h3>{task.title} {task.completed ? '✔️' : '❌'}</h3>
+    <div className={`task-item ${task.completed ? 'completed' : ''}`}>
+      <h3>{task.title}</h3>
       <p>{task.description}</p>
       <small>Creado el: {new Date(task.createdAt).toLocaleString()}</small><br />
       <button onClick={handleToggle}>

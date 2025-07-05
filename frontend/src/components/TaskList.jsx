@@ -32,7 +32,6 @@ export default function TaskList() {
 
   return (
     <div>
-      <h2>Lista de Tareas</h2>
       <TaskForm onTaskSaved={handleSave} taskToEdit={taskToEdit} />
       {tasks.length === 0 && <p>No hay tareas aún.</p>}
       {tasks.map(task => (
