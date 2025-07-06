@@ -13,12 +13,12 @@ app.use(express.json());
 
 let tasks = [];
 
-// GET /api/tasks
+// GET
 app.get('/api/tasks', (req, res) => {
   res.json(tasks);
 });
 
-// POST /api/tasks
+// POST
 app.post('/api/tasks', (req, res) => {
   const { title, description } = req.body;
   if (!title || !description) {
@@ -37,7 +37,7 @@ app.post('/api/tasks', (req, res) => {
   res.status(201).json(newTask);
 });
 
-// PUT /api/tasks/:id
+// PUT
 app.put('/api/tasks/:id', (req, res) => {
   const { id } = req.params;
   const { title, description, completed } = req.body;
@@ -52,7 +52,7 @@ app.put('/api/tasks/:id', (req, res) => {
   res.json(task);
 });
 
-// DELETE /api/tasks/:id
+// DELETE
 app.delete('/api/tasks/:id', (req, res) => {
   const { id } = req.params;
   tasks = tasks.filter(t => t.id !== id);

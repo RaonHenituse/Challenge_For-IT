@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #424449;
+  background-color: #9c9fa5;
   color: #333;
   line-height: 1.6;
   padding: 20px;
@@ -33,7 +33,7 @@ input, textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: Arial;
 }
 
 button {
